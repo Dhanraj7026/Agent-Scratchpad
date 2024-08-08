@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="scratchpad">ad74a6bf87ebcd10559db259dabb3510</macroponent>
+        <name>createPageHandler</name>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+    console.log('CreatePageHandler | event.name=' + event.name + '| event.elementId=' + event.elementId);
+
+    //Create case button clicked
+    if (event.name == 'NOW_BUTTON#CLICKED' && event.elementId == 'create_page_button') {
+        const templateFields = 'author=' + api.context.session.user.sys_id +
+            '^title=' + api.state.title +
+            '^note=' + api.state.note +
+            '^table=' + api.state.tableName +
+            '^document_id=' + api.state.tableid;
+            console.log('tableid ID:'+ api.state.tableid+' /table: '+ api.state.tableName + ' /note: '+ api.state.note + ' / title: '+ api.state.title);
+
+        api.data.create_note.execute({
+            "table": "x_snc_agentpad_notes",
+            "templateFields": templateFields,
+            "useSetDisplayValue": false
+        });
+    }
+
+    //insert succeeded
+    if( event.name=='DATA_OP_SUCCEEDED' && event.elementId=='create_note'){
+        api.setState("title", null);
+        api.setState("note", null);
+        //api.setState("noteid",null);
+        api.setState("displayPage", 1);
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-26 21:20:28</sys_created_on>
+        <sys_id>0a97d3c087bf0150559db259dabb3563</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>createPageHandler</sys_name>
+        <sys_package display_value="Agent Scratchpad" source="x_snc_agentpad">e30b4e7787abcd10559db259dabb3573</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Agent Scratchpad">e30b4e7787abcd10559db259dabb3573</sys_scope>
+        <sys_update_name>sys_ux_client_script_0a97d3c087bf0150559db259dabb3563</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-13 20:09:05</sys_updated_on>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

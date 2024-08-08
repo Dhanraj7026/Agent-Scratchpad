@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="INSERT_OR_UPDATE">
+        <app_config display_value="CSM/FSM Configurable Workspace App Config">f224e5a3530210102c30ddeeff7b128d</app_config>
+        <description/>
+        <fields/>
+        <icon>pencil-page-outline</icon>
+        <name>Scratchpad</name>
+        <optional_parameters/>
+        <order>120</order>
+        <parent_macroponent display_value="Interaction Record Page">8a565a808723101045957d3d87cb0bf3</parent_macroponent>
+        <parent_macroponent_composition_element_id>contextual_sidebar</parent_macroponent_composition_element_id>
+        <route_type>scratchpad</route_type>
+        <screen_type display_value="Scratchpad">327a4dd487774150559db259dabb3525</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-27 05:42:25</sys_created_on>
+        <sys_id>fe7acdd487774150559db259dabb351e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Scratchpad</sys_name>
+        <sys_package display_value="Agent Scratchpad" source="x_snc_agentpad">e30b4e7787abcd10559db259dabb3573</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Agent Scratchpad">e30b4e7787abcd10559db259dabb3573</sys_scope>
+        <sys_update_name>sys_ux_app_route_fe7acdd487774150559db259dabb351e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-27 05:42:25</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="delete_multiple" query="documentkey=fe7acdd487774150559db259dabb351e"/>
+</record_update>
