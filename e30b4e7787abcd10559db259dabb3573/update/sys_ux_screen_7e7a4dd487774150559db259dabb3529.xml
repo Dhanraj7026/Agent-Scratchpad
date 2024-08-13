@@ -3,6 +3,7 @@
         <active>true</active>
         <app_config display_value="CSM/FSM Configurable Workspace App Config">f224e5a3530210102c30ddeeff7b128d</app_config>
         <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
         <event_mappings>[ ]</event_mappings>
         <macroponent display_value="scratchpad">ad74a6bf87ebcd10559db259dabb3510</macroponent>
         <macroponent_config>{

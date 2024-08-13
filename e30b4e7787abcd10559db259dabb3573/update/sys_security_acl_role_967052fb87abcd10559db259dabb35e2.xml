@@ -14,6 +14,5 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-05-25 21:31:15</sys_updated_on>
         <sys_user_role display_value="sn_customerservice_agent" name="sn_customerservice_agent">3120f52cc312310015519f2974d3ae83</sys_user_role>
-        <transaction_id/>
     </sys_security_acl_role>
 </record_update>
